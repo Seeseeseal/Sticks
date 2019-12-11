@@ -33,7 +33,6 @@ class Sticks {
         pOneLeft = 1;
         pTwoRight = 1;
         pTwoLeft = 1;
-        System.out.println("Would you like to go first? (Y/N)");
         System.out.println("Player One RH" + " " + pOneRight);
         System.out.println("Player One LH" + " " + pOneLeft);
         System.out.println("Player Two RH" + " " + pTwoRight);
@@ -55,12 +54,12 @@ class Sticks {
     }
 
     // Playing the game
+    //In order to play the commands are
+    // 1R for player one right hand
+    // 1L for player one left hand
+    // 2R for player two right hand
+    //2L for player two right hand
     public void play() {
-        if (firstMove.equals("Y") || firstMove.equals("y")) {
-            myTurn();
-        } else if (firstMove.equals("N") || firstMove.equals("n")) {
-            computerTurn();
-        }
         while (!isWinner("Player 1") || !isWinner("Player Two")) {
             if (currentPlayer == 1) {
                 computerTurn();
@@ -68,6 +67,7 @@ class Sticks {
                 myTurn();
             }
         }
+
     }
 
 
@@ -195,8 +195,8 @@ class Sticks {
     //If there is a winner, then return who the winner is.
     public String getWinner() {
         if (isWinner("Player 1")) {
-            return "Player 1";
+            return "Player 1 wins";
         }
-        return "Player 2";
+        return "Player 2 wins";
     }
 }
