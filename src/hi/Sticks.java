@@ -54,7 +54,7 @@ class Sticks {
     }
 
     // Playing the game
-    //In order to play the commands are
+    //In order to play, the commands are
     // 1R for player one right hand
     // 1L for player one left hand
     // 2R for player two right hand
